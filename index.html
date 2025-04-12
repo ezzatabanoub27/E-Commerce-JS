@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+<div class="head">
+    <h2>MyStore</h2>
+    <p>Welcome To My STORE</p>
+
+</div>
+
+<div class="inputs">
+
+    <input type="text" placeholder="title" id="title">
+    <div class="price">
+        <input onkeyup="gettotal() " type="number" placeholder="price" id="price">
+        <input onkeyup="gettotal() " type="number" placeholder="taxes" id="taxes">
+        <input onkeyup="gettotal() " type="number" placeholder="ads" id="ads" >
+        <input onkeyup="gettotal() " type="number" placeholder="discount" id="discount">
+         <small id="total"></small>
+    </div>
+    <input type="number" placeholder="count" id="count">
+    <input type="text" placeholder="catogery" id="cateogry">
+    <button type="submit"  id="submit">Create</button>
+
+</div>
+<div class="outbuts">
+
+    <div class="search">
+        <input type="text" name="" id="searchbar" placeholder="search">
+        <div class="btnsearch">
+            <button id="searchbyname">Search Name</button>
+            <button id="searchbycateogry">Search Cateogry</button>
+
+        </div>
+    </div>
+
+         <table>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>update</th>
+                <th>delet</th>
+            </tr>
+            <tbody id="tbody">
+            
+         
+            
+            </tbody>
+         </table>
+
+
+
+</div>
+
+
+    <script src="next.js"></script>
+</body>
+</html>
