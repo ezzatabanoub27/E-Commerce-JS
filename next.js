@@ -62,13 +62,26 @@ submit.onclick =function ()
     count:count.value,
 
                   }
+                  if (newPro.count > 1) {
+                    for (let i = 0; i < newPro.count; i++) {
+                        productdata.push(newPro);
+                        
+                    }
+                   
+                    
+                }else{
+                    productdata.push(newPro);
+                }
                   productdata.push(newPro);
                   localStorage.setItem("product" , JSON.stringify(productdata));
 
                   clearData();
                   showData() 
 
+
+                  
     }
+   
 
 /////////////clear all data after create 
     function clearData(params) {
@@ -106,9 +119,11 @@ submit.onclick =function ()
 
 
 
+
             </tr>`;
             
         }
+       
 
         document.getElementById('tbody').innerHTML=table;
     }
@@ -120,5 +135,23 @@ submit.onclick =function ()
         localStorage.product=JSON.stringify(productdata);
         showData();
     
+        
+    }
+
+    let deleted=document.getElementById('deleteall');
+    if(productdata.length > 0){
+        deleted.innerHTML=`<button onclick="DeleteAll()">Delete All</button>`
+        
+
+    }else{
+        deleted.innerHTML='';
+    }
+
+
+    function DeleteAll() 
+    {
+        productdata.splice(0);
+        localStorage.clear();
+        showData();
         
     }
